@@ -3,14 +3,14 @@
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 //////////////// DEBUGGING OVERFLOW ISSUES /////////
-* {
+/* * {
   opacity: 1;
   visibility: visibile;
 }
 
 * {
   border: 1px solid #f00;
-}
+} */
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
@@ -83,12 +83,6 @@ body {
   margin-left: -15px;
 }
 
-.view {
-  background: url("https://mdbootstrap.com/img/Photos/Others/img (40).jpg")
-    no-repeat center center;
-  background-size: cover;
-}
-
 .navbar {
   background-color: transparent;
   -webkit-box-shadow: 0 8px 6px -6px black;
@@ -100,16 +94,12 @@ body {
   color: black;
 }
 
-.top-nav-collapse {
-  background-color: #4285f4;
-}
-
 .hero {
   background-image: url("../img/hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  margin-top: -40px;
+  margin-top: 0;
   z-index: 999;
   padding-top: 88px;
   text-align: center;
@@ -179,11 +169,6 @@ body {
   color: white;
 }
 
-.navbar-toggler-icon {
-  color: black !important;
-  z-index: 999;
-}
-
 .navbar-brand {
   display: inline-block;
   padding-top: 0.3125rem;
@@ -199,6 +184,25 @@ body {
   display: flex;
   text-transform: uppercase;
   font-weight: bold;
+  @include breakpoint(tablet) {
+    display: flex;
+  }
+  @include breakpoint(mobileonly) {
+    display: block;
+  }
+  @include breakpoint(minimobileonly) {
+    display: block;
+  }
+
+  @include breakpoint(phablet) {
+    display: block;
+  }
+}
+
+.navbar-expand-md .navbar-nav {
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin-right: -34%;
 }
 
 .navitemlast {
@@ -206,7 +210,11 @@ body {
   margin-left: -13%;
   text-transform: uppercase;
   font-weight: bold;
+  @include breakpoint(tablet) {
+    margin-left: -32%;
+  }
 }
+
 .nav-item-last {
   padding-right: 15px;
 }
