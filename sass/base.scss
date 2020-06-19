@@ -3,14 +3,14 @@
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 //////////////// DEBUGGING OVERFLOW ISSUES /////////
-* {
+/* * {
   opacity: 1;
   visibility: visibile;
 }
 
 * {
   border: 1px solid #f00;
-}
+} */
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
@@ -269,13 +269,25 @@ body {
   margin-top: 30px;
   font-size: 2.1rem;
   color: white;
-  width: 160px;
+  /*   width: 160px; */
   padding-right: 10px;
 
   margin-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
   border-right: 1px solid rgba(255, 255, 255, 0.2);
+  @include breakpoint(tablet) {
+    text-align: center;
+  }
+  @include breakpoint(phablet) {
+    text-align: center;
+  }
+  @include breakpoint(mobileonly) {
+    text-align: center;
+  }
+  @include breakpoint(minimobileonly) {
+    text-align: center;
+  }
 
   &--white {
     margin-top: 30px;
