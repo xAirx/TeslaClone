@@ -1,0 +1,452 @@
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+//////////////// DEBUGGING OVERFLOW ISSUES /////////
+/* * {
+  opacity: 1;
+  visibility: visibile;
+}
+
+* {
+  border: 1px solid #f00;
+} */
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+
+/*********************
+BREAKPOINTS
+*********************/
+
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (max-width: 70em) {
+      @content;
+    }
+  } @else if $point == laptop {
+    @media (max-width: 64em) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media (max-width: 50em) {
+      @content;
+    }
+  } @else if $point == phablet {
+    @media (max-width: 44.5em) {
+      @content;
+    }
+  } @else if $point == mobileonly {
+    // IHPHONe 6 -> xr xs -> 11 -> pixel xl 2
+    @media (max-width: 44.5em) {
+      @content;
+    }
+  } @else if $point == minimobileonly {
+    //IPHONE 5
+    @media (max-width: 21.5em) {
+      @content;
+    }
+  }
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  /* box sizing border box */
+  box-sizing: inherit;
+  /* changing the box model so that the borders and paddings are no longer added. */
+}
+
+html {
+  // THIS DEFINES WHAT 1 REM IS;;
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+/*Browser Reset  Starting clean. */
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+  font-size: 13px;
+}
+
+.fa.fa-apple.apple-logo {
+  font-size: 21px;
+  line-height: 0;
+}
+
+.product {
+  padding-top: 50px;
+  text-align: center;
+  margin-bottom: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  h1 {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 200;
+    @include breakpoint(minimobileonly) {
+      font-size: 1.5rem;
+    }
+    @include breakpoint(mobileonly) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .links {
+    font-size: 20px;
+
+    @include breakpoint(minimobileonly) {
+      font-size: 15px;
+    }
+    @include breakpoint(mobileonly) {
+      font-size: 15px;
+    }
+
+    .learn-more {
+      margin-right: 20px;
+    }
+  }
+}
+
+.fa.fa-angle-right {
+  margin-left: 8px;
+}
+
+.product {
+  &.iphone-x {
+    background-color: #f9f9f9f9;
+    padding-top: 157px;
+
+    @include breakpoint(minimobileonly) {
+      padding-top: 50px;
+    }
+    @include breakpoint(mobileonly) {
+      padding-top: 50px;
+    }
+  }
+
+  .ipad {
+    background-color: #f9f9f9f9;
+  }
+
+  &.macbookpro {
+    background-color: #131218;
+    color: white;
+  }
+
+  &.ipad {
+    background-color: #f5f5f5;
+  }
+
+  .links.dark a {
+    color: white;
+  }
+}
+
+.links {
+  &.small-link-margin {
+    margin-bottom: 31px;
+  }
+
+  &.small-link-margin-dark {
+    margin-bottom: 0;
+    @include breakpoint(minimobileonly) {
+      margin-bottom: 15px;
+    }
+    @include breakpoint(mobileonly) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.navbar.navbar-dark.navbar-expand-md.sticky-top.bg-dark {
+  background-color: black !important;
+  opacity: 0.88;
+}
+
+.product-small {
+  height: 550px;
+  padding-top: 40px;
+  margin: 0 0 10px 10px;
+  text-align: center;
+  background-color: #eeeeee;
+
+  @include breakpoint(minimobileonly) {
+    margin: 0px -9px 10px 7px;
+  }
+  @include breakpoint(mobileonly) {
+    margin: 0px -9px 10px 7px;
+  }
+
+  h3 {
+    font-size: 37px;
+    font-weight: bold;
+    @include breakpoint(minimobileonly) {
+      font-size: 23px;
+      font-weight: bold;
+    }
+    @include breakpoint(mobileonly) {
+      font-size: 30px;
+      font-weight: bold;
+    }
+  }
+
+  h4 {
+    font-size: 26px;
+    font-weight: 200;
+    margin-bottom: 14px;
+    @include breakpoint(minimobileonly) {
+      font-size: 13px;
+      font-weight: bold;
+    }
+    @include breakpoint(mobileonly) {
+      font-size: 13px;
+      font-weight: bold;
+    }
+  }
+}
+
+.small {
+  height: 550px;
+  padding-top: 40px;
+  margin: 0 0 10px 10px;
+  text-align: center;
+
+  &-photography {
+    height: 550px;
+    padding-top: 40px;
+    margin: 0 0 10px 10px;
+    text-align: center;
+
+    @include breakpoint(minimobileonly) {
+      height: 404px;
+      margin: 0px 7px 10px -8px;
+    }
+    @include breakpoint(mobileonly) {
+      height: 404px;
+      margin: 0px 7px 10px -8px;
+    }
+  }
+
+  &-iphone8 {
+    height: 550px;
+    padding-top: 40px;
+    margin: 0 0 10px 10px;
+    text-align: center;
+    background-color: #f9f0eb;
+    @include breakpoint(minimobileonly) {
+      margin: 0px -9px 10px 7px;
+      height: 404px;
+    }
+    @include breakpoint(mobileonly) {
+      margin: 0px -9px 10px 7px;
+      height: 404px;
+    }
+  }
+  &-airpods {
+    height: 550px;
+    padding-top: 40px;
+    margin: 0 0 10px 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    @include breakpoint(minimobileonly) {
+      margin: 0px -9px 10px 7px;
+      height: 404px;
+    }
+    @include breakpoint(mobileonly) {
+      margin: 0px -9px 10px 7px;
+      height: 404px;
+    }
+  }
+  &-watch {
+    height: 550px;
+    padding-top: 40px;
+    margin: 0 0 10px 10px;
+    text-align: center;
+    background-color: #eeeeee;
+    @include breakpoint(minimobileonly) {
+      margin: 0px 7px 10px -8px;
+      height: 404px;
+    }
+    @include breakpoint(mobileonly) {
+      margin: 0px 7px 10px -8px;
+      height: 404px;
+    }
+  }
+}
+
+.links.small-link-margin-grid {
+  font-size: 18px;
+  font-weight: 200;
+  margin-top: -6px;
+  margin-bottom: 27px;
+  @include breakpoint(minimobileonly) {
+    font-size: 6px;
+    /*  width: 58%; */
+
+    width: 100px;
+
+    margin: 0 auto;
+  }
+  @include breakpoint(mobileonly) {
+    font-size: 12px;
+    width: 100px;
+
+    margin: 0 auto;
+    margin-bottom: 20px;
+    /*  width: 40%; */
+  }
+}
+
+.product-small .links .learn-more {
+  margin-right: 10px;
+}
+
+.darktext {
+  color: white;
+  color: white;
+}
+
+.product-small-dark {
+  @include breakpoint(minimobileonly) {
+    margin: 0px 7px 10px -7px;
+  }
+  @include breakpoint(mobileonly) {
+    margin: 0px 7px 10px -7px;
+  }
+  h3 {
+    font-size: 35px;
+    font-weight: bold;
+    @include breakpoint(minimobileonly) {
+      font-size: 12px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    @include breakpoint(mobileonly) {
+      font-size: 18px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+
+  h4 {
+    font-size: 17px;
+    font-weight: 400;
+  }
+
+  height: 550px;
+  color: white;
+  padding-top: 416px;
+  margin: 0 0 10px 10px;
+  text-align: center;
+
+  &.learn-more {
+    margin-right: 20px;
+  }
+
+  .links {
+    .learn-more {
+      margin-right: 10px;
+    }
+
+    a {
+      color: white;
+    }
+  }
+}
+
+/* /////////////// FOOTER //////////////
+ */
+
+.page-footer {
+  background-color: #f3f3f2;
+  padding-top: 50px;
+  padding-bottom: 10px;
+
+  h4 {
+    color: #333333;
+    font-size: 11px;
+    font-weight: bold;
+  }
+
+  p {
+    color: #888;
+    font-size: 11px;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 45px;
+    word-break: break-all;
+
+    a {
+      color: #555;
+      font-size: 11px;
+    }
+
+    li {
+      margin-bottom: 5px;
+      line-height: 1.3;
+    }
+  }
+
+  .footer-legal {
+    .copyright {
+      margin-right: 60px;
+    }
+
+    .legal-links .item {
+      padding-right: 13px;
+      border-right: 1px solid #ccc;
+      margin: 0;
+      margin-right: 13px;
+
+      &:last-child {
+        border-right: none;
+      }
+
+      h5 {
+        font-size: 11px;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .region {
+    margin-bottom: 20px;
+
+    a {
+      color: #555;
+      font-size: 11px;
+    }
+
+    img {
+      margin-right: 7px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .page-footer .region {
+    margin-bottom: 0;
+  }
+}
