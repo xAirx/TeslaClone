@@ -3,14 +3,14 @@
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 //////////////// DEBUGGING OVERFLOW ISSUES /////////
-* {
+/* * {
   opacity: 1;
   visibility: visibile;
 }
 
 * {
   border: 1px solid #f00;
-}
+} */
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
@@ -154,6 +154,16 @@ body {
   padding-right: 20px;
   padding-left: 20px;
 }
+.hero-solar-solarpanels {
+  background-image: url("../img/D_eco_app_2880x1154.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-top: -40px;
+  z-index: 999;
+  padding-top: 600px;
+  text-align: center;
+}
 
 .textlight {
   color: white;
@@ -202,10 +212,24 @@ body {
 .main-subheader {
   font-size: 4rem;
   margin-bottom: 410px;
+  &--white {
+    text-align: left;
+    margin-left: 50px;
+    font-size: 3rem;
+    margin-bottom: -10px;
+  }
 }
 .main-header {
   font-size: 2rem;
   font-weight: 100;
+
+  &--white {
+    text-align: left;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: -6px;
+    font-weight: 100;
+  }
 }
 .maindescription {
   font-size: 1.5rem;
@@ -221,6 +245,18 @@ body {
   margin-left: auto;
   margin-left: 17%;
   justify-content: center;
+
+  &--white {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-left: auto;
+    justify-content: center;
+    background-color: white;
+    color: black;
+  }
 }
 .infoblock {
   margin-top: 30px;
@@ -300,10 +336,22 @@ body {
   margin-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
+
+  &--white {
+    width: 86%;
+    font-size: 1.5rem;
+    margin-top: 51px;
+    font-weight: 400;
+  }
 }
 
 .infoblockmaintext {
   width: 100%;
+  &--white {
+    width: 100%;
+    color: black;
+    padding: 10px;
+  }
 }
 .infoblocksubtext {
   font-size: 1.2rem;
@@ -316,6 +364,10 @@ body {
   padding-bottom: 47px;
   cursor: pointer;
   font-weight: 100;
+
+  &--fullwidth {
+    width: 100%;
+  }
 }
 .infoblockbutton {
   border-radius: 100px;
@@ -330,6 +382,21 @@ body {
   width: 139px;
   height: 30px;
   margin-top: 48px;
+
+  &--white {
+    border-radius: 100px;
+    background-color: transparent;
+    color: white;
+    font-size: 14px;
+    line-height: 3px;
+    font-weight: 100;
+    text-transform: uppercase;
+    width: 200px;
+    height: 30px;
+    color: black;
+    margin-left: 50px;
+    border: 2px solid black;
+  }
 
   @include breakpoint(mobileonly) {
     margin: 0 auto;
