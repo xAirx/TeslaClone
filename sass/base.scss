@@ -3,14 +3,14 @@
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 //////////////// DEBUGGING OVERFLOW ISSUES /////////
-/* * {
+* {
   opacity: 1;
   visibility: visibile;
 }
 
 * {
   border: 1px solid #f00;
-} */
+}
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
@@ -43,7 +43,7 @@ BREAKPOINTS
     }
   } @else if $point == mobileonly {
     // IHPHONe 6 -> xr xs -> 11 -> pixel xl 2
-    @media (max-width: 44.5em) {
+    @media (max-width: 35.5em) {
       @content;
     }
   } @else if $point == minimobileonly {
@@ -108,8 +108,23 @@ body {
   padding-left: 20px;
 
   &--solarspecs {
+    flex-wrap: wrap;
     background-color: black;
     display: flex;
+    justify-content: space-between;
+
+    @include breakpoint(tablet) {
+      justify-content: space-evenly;
+    }
+    @include breakpoint(phablet) {
+      justify-content: space-evenly;
+    }
+    @include breakpoint(mobileonly) {
+      justify-content: space-evenly;
+    }
+    @include breakpoint(minimobileonly) {
+      justify-content: space-evenly;
+    }
   }
 
   &--solardesign {
@@ -219,10 +234,50 @@ body {
   border-right: 1px solid rgba(255, 255, 255, 0.2);
 
   &--solarspecsleftside {
-    height: 50vh;
     background-image: url("../img/D-design_hero-2090x1800.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
+
+    @include breakpoint(tablet) {
+      height: 200px;
+    }
+    @include breakpoint(phablet) {
+      height: 200px;
+    }
+    @include breakpoint(mobileonly) {
+      height: 200px;
+    }
+    @include breakpoint(minimobileonly) {
+      height: 200px;
+    }
+
+    span {
+      color: white;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    .fa-map-pin {
+      line-height: 0px;
+      font-size: 40px;
+    }
+
+    .spanone {
+      position: absolute;
+      top: 40%;
+      left: 30%;
+    }
+    .spantwo {
+      position: absolute;
+      top: 20%;
+      left: 60%;
+    }
+    .spanthree {
+      position: absolute;
+      top: 80%;
+      left: 60%;
+    }
   }
 
   &--solarspecs {
@@ -230,10 +285,10 @@ body {
     font-size: 2.1rem;
     color: white;
     width: 160px;
-
     margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
+
     border-right: 1px solid rgba(255, 255, 255, 0.2);
   }
 }
@@ -273,4 +328,21 @@ body {
   font-weight: 100;
   margin-top: 12%;
   margin-left: 20%;
+}
+
+.heading {
+  &--solarpanelspecs {
+    width: 100%;
+    h3 {
+      font-size: 2.5rem;
+      color: white;
+    }
+  }
+}
+
+.content {
+  padding: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
