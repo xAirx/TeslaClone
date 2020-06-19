@@ -1,11 +1,10 @@
-/* * {
+* {
   opacity: 1;
-  visibility: visibile;
-}
+  visibility: visibile; }
 
 * {
-  border: 1px solid #f00;
-} */
+  border: 1px solid #f00; }
+
 /*********************
 BREAKPOINTS
 *********************/
@@ -24,6 +23,14 @@ html {
 body {
   box-sizing: border-box;
   /* background-color: black; */ }
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: 0px;
+  margin-left: -15px; }
 
 .view {
   background: url("https://mdbootstrap.com/img/Photos/Others/img (40).jpg") no-repeat center center;
@@ -181,7 +188,9 @@ body {
     margin-left: auto;
     justify-content: center;
     background-color: white;
-    color: black; }
+    color: black;
+    padding-left: 15%;
+    padding-right: 15%; }
 
 .infoblock {
   margin-top: 30px;

@@ -3,14 +3,14 @@
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 //////////////// DEBUGGING OVERFLOW ISSUES /////////
-/* * {
+* {
   opacity: 1;
   visibility: visibile;
 }
 
 * {
   border: 1px solid #f00;
-} */
+}
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
@@ -72,6 +72,15 @@ html {
 body {
   box-sizing: border-box;
   /* background-color: black; */
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: 0px;
+  margin-left: -15px;
 }
 
 .view {
@@ -255,6 +264,8 @@ body {
     justify-content: center;
     background-color: white;
     color: black;
+    padding-left: 15%;
+    padding-right: 15%;
     @include breakpoint(tablet) {
     }
     @include breakpoint(phablet) {
