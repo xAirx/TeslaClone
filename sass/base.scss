@@ -115,6 +115,7 @@ body {
   text-align: center;
   padding-right: 20px;
   padding-left: 20px;
+  background-position: center;
 
   &--solarspecs {
     flex-wrap: wrap;
@@ -171,10 +172,16 @@ body {
   z-index: 999;
   padding-top: 600px;
   text-align: center;
+  background-position: center;
 }
 
 .textlight {
   color: white;
+}
+
+.navbar-toggler-icon {
+  color: black !important;
+  z-index: 999;
 }
 
 .navbar-brand {
@@ -194,19 +201,12 @@ body {
   font-weight: bold;
 }
 
-.navbar-expand-md .navbar-nav {
-  -ms-flex-direction: row;
-  flex-direction: row;
-  margin-right: -34%;
-}
-
 .navitemlast {
   display: flex;
   margin-left: -13%;
   text-transform: uppercase;
   font-weight: bold;
 }
-
 .nav-item-last {
   padding-right: 15px;
 }
