@@ -95,17 +95,12 @@ body {
   background-color: #4285f4;
 }
 
-@media only screen and (max-width: 768px) {
-  .navbar {
-    background-color: #4285f4;
-  }
-}
 .hero {
   background-image: url("../img/hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-
+  margin-top: -40px;
   z-index: 999;
   padding-top: 88px;
   text-align: center;
@@ -146,6 +141,16 @@ body {
   margin-left: -13%;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+.nav-item-last {
+  padding-right: 15px;
+}
+.nav-item-lastsecond {
+  padding-right: 50px;
+}
+.nav-item {
+  padding-right: 15px;
 }
 
 .main-subheader {
@@ -204,16 +209,16 @@ body {
   font-size: 3rem;
   color: white;
   padding-bottom: 20px;
+  cursor: pointer;
 }
-
 .infoblockbutton {
   border-radius: 100px;
   background-color: transparent;
   color: white;
-  padding: 13px;
+  padding: 14px;
   font-size: 14px;
   line-height: 3px;
-  height: 40px;
+
   font-weight: 100;
   margin-top: 12%;
   margin-left: 20%;
