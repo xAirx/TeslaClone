@@ -276,17 +276,72 @@ body {
     font-size: 2.1rem;
     color: white;
     /* width: 144px; */
-    padding-right: 10px;
     border-right: 1px solid white;
     margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
-    width: 86%;
+    width: 100%;
     font-size: 1.5rem;
     text-align: left;
     font-weight: 400;
     height: 60px;
     margin-top: 51px;
+    /* @include breakpoint(tablet) {
+      font-size: 2.1rem;
+      color: white;
+      border-right: 1px solid white;
+      display: flex;
+      flex-wrap: wrap;
+      padding-right: 30px;
+      font-size: 1.5rem;
+      margin-top: 51px;
+      text-align: left;
+      font-weight: 400;
+      margin: 0 auto;
+      margin-bottom: 50px;
+    }
+    @include breakpoint(phablet) {
+      font-size: 2.1rem;
+      color: white;
+      border-right: 1px solid white;
+      display: flex;
+      flex-wrap: wrap;
+      padding-right: 30px;
+      font-size: 1.5rem;
+      margin-top: 51px;
+      text-align: left;
+      font-weight: 400;
+      margin: 0 auto;
+      margin-bottom: 50px;
+    }
+    @include breakpoint(mobileonly) {
+      font-size: 2.1rem;
+      color: white;
+      border-right: 1px solid white;
+      display: flex;
+      flex-wrap: wrap;
+      padding-right: 30px;
+      font-size: 1.5rem;
+      margin-top: 51px;
+      text-align: left;
+      font-weight: 400;
+      margin: 0 auto;
+      margin-bottom: 50px;
+    }
+    @include breakpoint(minimobileonly) {
+      font-size: 2.1rem;
+      color: white;
+      border-right: 1px solid white;
+      display: flex;
+      flex-wrap: wrap;
+      padding-right: 30px;
+      font-size: 1.5rem;
+      margin-top: 51px;
+      margin-bottom: 50px;
+      text-align: left;
+      font-weight: 400;
+      margin: 0 auto;
+    } */
     /*    padding-right: 10px;
       font-size: 2.1rem;
       color: white;
@@ -304,62 +359,6 @@ body {
       height: 120px;
       margin: 0 auto;
   } */ }
-    @media (max-width: 60em) {
-      .infoblock--solarspecsrightside {
-        font-size: 2.1rem;
-        color: white;
-        border-right: 1px solid white;
-        display: flex;
-        flex-wrap: wrap;
-        padding-right: 30px;
-        font-size: 1.5rem;
-        margin-top: 51px;
-        text-align: left;
-        font-weight: 400;
-        margin: 0 auto;
-        margin-bottom: 50px; } }
-    @media (max-width: 52.5em) {
-      .infoblock--solarspecsrightside {
-        font-size: 2.1rem;
-        color: white;
-        border-right: 1px solid white;
-        display: flex;
-        flex-wrap: wrap;
-        padding-right: 30px;
-        font-size: 1.5rem;
-        margin-top: 51px;
-        text-align: left;
-        font-weight: 400;
-        margin: 0 auto;
-        margin-bottom: 50px; } }
-    @media (max-width: 35.5em) {
-      .infoblock--solarspecsrightside {
-        font-size: 2.1rem;
-        color: white;
-        border-right: 1px solid white;
-        display: flex;
-        flex-wrap: wrap;
-        padding-right: 30px;
-        font-size: 1.5rem;
-        margin-top: 51px;
-        text-align: left;
-        font-weight: 400;
-        margin: 0 auto;
-        margin-bottom: 50px; } }
-    @media (max-width: 21.5em) {
-      .infoblock--solarspecsrightside {
-        font-size: 2.1rem;
-        color: white;
-        border-right: 1px solid white;
-        display: flex;
-        flex-wrap: wrap;
-        padding-right: 30px;
-        font-size: 1.5rem;
-        margin-top: 51px;
-        margin-bottom: 50px;
-        text-align: left;
-        font-weight: 400;
-        margin: 0 auto; } }
   .infoblock--white {
     font-size: 2.1rem;
     color: white;
