@@ -34,11 +34,11 @@ BREAKPOINTS
       @content;
     }
   } @else if $point == tablet {
-    @media (max-width: 50em) {
+    @media (max-width: 60em) {
       @content;
     }
   } @else if $point == phablet {
-    @media (max-width: 44.5em) {
+    @media (max-width: 52.5em) {
       @content;
     }
   } @else if $point == mobileonly {
@@ -71,7 +71,7 @@ html {
 
 body {
   box-sizing: border-box;
-  /* background-color: black; */
+  background-color: black;
 }
 
 .row {
@@ -102,7 +102,16 @@ body {
   margin-top: 0;
   z-index: 999;
   /*  padding-top: 88px; */
-  padding-top: 18px;
+  /*   padding-top: 18px;
+ */
+  @include breakpoint(phablet) {
+  }
+  @include breakpoint(mobileonly) {
+    background-image: url("../img/hero.jpg");
+  }
+  @include breakpoint(minimobileonly) {
+    background-image: url("../img/hero.jpg");
+  }
   text-align: center;
   padding-right: 20px;
   padding-left: 20px;
@@ -121,6 +130,20 @@ body {
     padding-left: 20px;
     background-position: center;
     padding-bottom: 250px;
+    @include breakpoint(minimobileonly) {
+      display: none;
+    }
+
+    @include breakpoint(mobileonly) {
+      display: none;
+    }
+
+    @include breakpoint(phablet) {
+      display: none;
+    }
+    @include breakpoint(tablet) {
+      display: none;
+    }
   }
 
   &--solarspecs {
@@ -209,7 +232,6 @@ body {
   @include breakpoint(minimobileonly) {
     display: block;
   }
-
   @include breakpoint(phablet) {
     display: block;
   }
@@ -243,7 +265,7 @@ body {
 
 .main-subheader {
   font-size: 4rem;
-  margin-bottom: 40%;
+  margin-bottom: 400px;
   color: white;
   &--white {
     text-align: left;
@@ -251,6 +273,16 @@ body {
     font-size: 3rem;
     margin-bottom: -10px;
   }
+
+  /*   @include breakpoint(mobileonly) {
+  }
+  @include breakpoint(minimobileonly) {
+  }
+  @include breakpoint(phablet) {
+  }
+  @include breakpoint(tablet) {
+    margin-bottom: 188px;
+  } */
 }
 .main-header {
   /*   font-size: 2rem;
@@ -282,6 +314,8 @@ body {
   margin-left: auto;
   margin-left: 17%;
   justify-content: center;
+  /* min-width: 300px; */
+  margin: 0 auto;
 
   &--white {
     width: 100%;
@@ -293,8 +327,7 @@ body {
     justify-content: center;
     background-color: white;
     color: black;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 11%;
     @include breakpoint(tablet) {
     }
     @include breakpoint(phablet) {
@@ -309,8 +342,8 @@ body {
   margin-top: 30px;
   font-size: 2.1rem;
   color: white;
+
   /*   width: 160px; */
-  padding-right: 10px;
 
   margin-bottom: 20px;
   display: flex;
@@ -329,11 +362,100 @@ body {
     text-align: center;
   }
 
-  &--white {
-    margin-top: 30px;
+  &--solarspecsrightside {
     font-size: 2.1rem;
     color: white;
-    width: 144px;
+    /* width: 144px; */
+    padding-right: 10px;
+    border-right: 1px solid white;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 86%;
+    font-size: 1.5rem;
+    text-align: left;
+    font-weight: 400;
+    height: 60px;
+    margin-top: 51px;
+    @include breakpoint(tablet) {
+      font-size: 2.1rem;
+      color: white;
+      border-right: 1px solid white;
+      display: flex;
+      flex-wrap: wrap;
+      padding-right: 30px;
+      font-size: 1.5rem;
+      margin-top: 51px;
+      text-align: left;
+      font-weight: 400;
+      margin: 0 auto;
+      margin-bottom: 50px;
+    }
+    @include breakpoint(phablet) {
+      font-size: 2.1rem;
+      color: white;
+      border-right: 1px solid white;
+      display: flex;
+      flex-wrap: wrap;
+      padding-right: 30px;
+      font-size: 1.5rem;
+      margin-top: 51px;
+      text-align: left;
+      font-weight: 400;
+      margin: 0 auto;
+      margin-bottom: 50px;
+    }
+    @include breakpoint(mobileonly) {
+      font-size: 2.1rem;
+      color: white;
+      border-right: 1px solid white;
+      display: flex;
+      flex-wrap: wrap;
+      padding-right: 30px;
+      font-size: 1.5rem;
+      margin-top: 51px;
+      text-align: left;
+      font-weight: 400;
+      margin: 0 auto;
+      margin-bottom: 50px;
+    }
+    @include breakpoint(minimobileonly) {
+      font-size: 2.1rem;
+      color: white;
+      border-right: 1px solid white;
+      display: flex;
+      flex-wrap: wrap;
+      padding-right: 30px;
+      font-size: 1.5rem;
+      margin-top: 51px;
+      margin-bottom: 50px;
+      text-align: left;
+      font-weight: 400;
+      margin: 0 auto;
+    }
+    /*    padding-right: 10px;
+      font-size: 2.1rem;
+      color: white;
+      width: 144px;
+      border-right: 1px solid white;
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      padding-right: 30px;
+      width: 50%;
+      font-size: 1.5rem;
+      margin-top: 51px;
+      text-align: left;
+      font-weight: 400;
+      height: 120px;
+      margin: 0 auto;
+  } */
+  }
+
+  &--white {
+    font-size: 2.1rem;
+    color: white;
+    /* width: 144px; */
     margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -350,19 +472,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-
-    @include breakpoint(tablet) {
-      height: 200px;
-    }
-    @include breakpoint(phablet) {
-      height: 200px;
-    }
-    @include breakpoint(mobileonly) {
-      height: 200px;
-    }
-    @include breakpoint(minimobileonly) {
-      height: 200px;
-    }
+    height: 50vh;
 
     span {
       color: white;
@@ -387,7 +497,7 @@ body {
     }
     .spanthree {
       position: absolute;
-      top: 80%;
+      top: 74%;
       left: 60%;
     }
   }
@@ -408,7 +518,8 @@ body {
   margin-top: 30px;
   font-size: 2.1rem;
   color: white;
-  width: 144px;
+  /*   width: 144px;
+ */
   margin-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -430,7 +541,7 @@ body {
 .chevrondown {
   font-size: 2rem;
   color: white;
-  padding-bottom: 71px;
+  padding-bottom: 61px;
   cursor: pointer;
   font-weight: 100;
 
@@ -445,11 +556,21 @@ body {
   font-size: 14px;
   line-height: 3px;
   font-weight: 100;
-  width: 200px;
+  width: 180px;
   text-transform: uppercase;
 
   height: 30px;
   margin-top: 48px;
+
+  @include breakpoint(phablet) {
+    margin-top: 10px;
+  }
+  @include breakpoint(mobileonly) {
+    margin-top: 10px;
+  }
+  @include breakpoint(minimobileonly) {
+    margin-top: 10px;
+  }
 
   &--white {
     border-radius: 100px;
@@ -466,18 +587,32 @@ body {
 
     border: 2px solid black;
   }
-
-  @include breakpoint(mobileonly) {
-    margin: 0 auto;
-  }
-  @include breakpoint(minimobileonly) {
-    margin: 0 auto;
-  }
 }
 
 .heading {
   &--solarpanelspecs {
     width: 100%;
+    @include breakpoint(phablet) {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      margin-bottom: 60px;
+      margin-top: 60px;
+    }
+    @include breakpoint(mobileonly) {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      margin-bottom: 60px;
+      margin-top: 60px;
+    }
+    @include breakpoint(minimobileonly) {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      margin-bottom: 60px;
+      margin-top: 60px;
+    }
     h3 {
       font-size: 2.5rem;
       color: white;
@@ -486,7 +621,7 @@ body {
 }
 
 .content {
-  padding: 60px;
+  padding: 20px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -609,6 +744,21 @@ body {
     opacity: 1;
     overflow: hidden;
     margin-top: -202px;
+
+    @include breakpoint(minimobileonly) {
+      display: none;
+    }
+
+    @include breakpoint(mobileonly) {
+      display: none;
+    }
+
+    @include breakpoint(phablet) {
+      height: 130vh;
+    }
+    @include breakpoint(tablet) {
+      height: 108vh;
+    }
   }
   &--section {
     position: absolute;
