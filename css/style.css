@@ -81,7 +81,7 @@ body {
     @media (max-width: 35.5em) {
       .hero--summon {
         display: none; } }
-    @media (max-width: 52.5em) {
+    @media (max-width: 48.5em) {
       .hero--summon {
         display: none; } }
     @media (max-width: 60em) {
@@ -92,10 +92,10 @@ body {
     background-color: black;
     display: flex;
     justify-content: space-between; }
-    @media (max-width: 52.5em) {
+    @media (max-width: 48.5em) {
       .hero--solarspecs {
         justify-content: space-evenly; } }
-    @media (max-width: 52.5em) {
+    @media (max-width: 48.5em) {
       .hero--solarspecs {
         justify-content: space-evenly; } }
     @media (max-width: 35.5em) {
@@ -164,7 +164,7 @@ body {
   @media (max-width: 21.5em) {
     .navitemmiddle {
       display: block; } }
-  @media (max-width: 52.5em) {
+  @media (max-width: 48.5em) {
     .navitemmiddle {
       display: block; } }
 
@@ -233,23 +233,22 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 0 auto;
-  margin-left: auto;
-  margin-left: 17%;
+  /* margin-left: 17%; */
   justify-content: center;
-  /* min-width: 300px; */
+  /*   min-width: 300px;
+ */
   margin: 0 auto; }
   .infoboxcontainer--white {
-    width: 100%;
+    /*  width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: row; */
     /* flex-wrap: wrap; */
-    margin: 0 auto;
+    /*     margin: 0 auto;
     margin-left: auto;
-    justify-content: center;
+    justify-content: center; */
     background-color: white;
     color: black;
-    padding-left: 11%; }
+    /*     padding-left: 11%; */ }
 
 .infoblock {
   margin-top: 30px;
@@ -263,7 +262,7 @@ body {
   @media (max-width: 60em) {
     .infoblock {
       text-align: center; } }
-  @media (max-width: 52.5em) {
+  @media (max-width: 48.5em) {
     .infoblock {
       text-align: center; } }
   @media (max-width: 35.5em) {
@@ -272,6 +271,25 @@ body {
   @media (max-width: 21.5em) {
     .infoblock {
       text-align: center; } }
+  .infoblock--white {
+    font-size: 1.5rem;
+    text-align: left;
+    width: 80%; }
+    @media (max-width: 21.5em) {
+      .infoblock--white {
+        width: 60%;
+        margin: 0 auto;
+        text-align: center; } }
+    @media (max-width: 35.5em) {
+      .infoblock--white {
+        width: 60%;
+        margin: 0 auto;
+        text-align: center; } }
+    @media (max-width: 48.5em) {
+      .infoblock--white {
+        width: 60%;
+        margin: 0 auto;
+        text-align: center; } }
   .infoblock--solarspecsrightside {
     font-size: 2.1rem;
     color: white;
@@ -285,93 +303,28 @@ body {
     text-align: left;
     font-weight: 400;
     height: 60px;
-    margin-top: 51px;
-    /* @include breakpoint(tablet) {
-      font-size: 2.1rem;
-      color: white;
-      border-right: 1px solid white;
-      display: flex;
-      flex-wrap: wrap;
-      padding-right: 30px;
-      font-size: 1.5rem;
-      margin-top: 51px;
-      text-align: left;
-      font-weight: 400;
-      margin: 0 auto;
-      margin-bottom: 50px;
-    }
-    @include breakpoint(phablet) {
-      font-size: 2.1rem;
-      color: white;
-      border-right: 1px solid white;
-      display: flex;
-      flex-wrap: wrap;
-      padding-right: 30px;
-      font-size: 1.5rem;
-      margin-top: 51px;
-      text-align: left;
-      font-weight: 400;
-      margin: 0 auto;
-      margin-bottom: 50px;
-    }
-    @include breakpoint(mobileonly) {
-      font-size: 2.1rem;
-      color: white;
-      border-right: 1px solid white;
-      display: flex;
-      flex-wrap: wrap;
-      padding-right: 30px;
-      font-size: 1.5rem;
-      margin-top: 51px;
-      text-align: left;
-      font-weight: 400;
-      margin: 0 auto;
-      margin-bottom: 50px;
-    }
-    @include breakpoint(minimobileonly) {
-      font-size: 2.1rem;
-      color: white;
-      border-right: 1px solid white;
-      display: flex;
-      flex-wrap: wrap;
-      padding-right: 30px;
-      font-size: 1.5rem;
-      margin-top: 51px;
-      margin-bottom: 50px;
-      text-align: left;
-      font-weight: 400;
-      margin: 0 auto;
-    } */
-    /*    padding-right: 10px;
-      font-size: 2.1rem;
-      color: white;
-      width: 144px;
-      border-right: 1px solid white;
-      margin-bottom: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      padding-right: 30px;
-      width: 50%;
-      font-size: 1.5rem;
-      margin-top: 51px;
-      text-align: left;
-      font-weight: 400;
-      height: 120px;
-      margin: 0 auto;
-  } */ }
-  .infoblock--white {
-    font-size: 2.1rem;
-    color: white;
-    /* width: 144px; */
-    margin-bottom: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    padding-right: 10px;
-    width: 86%;
-    font-size: 1.5rem;
-    margin-top: 51px;
-    text-align: left;
-    font-weight: 400; }
+    margin-top: 51px; }
+    @media (max-width: 21.5em) {
+      .infoblock--solarspecsrightside {
+        width: 50%;
+        margin-bottom: 40px !important;
+        margin: 0 auto; } }
+    @media (max-width: 35.5em) {
+      .infoblock--solarspecsrightside {
+        width: 50%;
+        margin-bottom: 40px !important;
+        margin: 0 auto; } }
+    @media (max-width: 48.5em) {
+      .infoblock--solarspecsrightside {
+        width: 50%;
+        margin-bottom: 40px !important;
+        margin: 0 auto; } }
+    @media (max-width: 35.5em) {
+      .infoblock--solarspecsrightside {
+        text-align: center; } }
+    @media (max-width: 21.5em) {
+      .infoblock--solarspecsrightside {
+        text-align: center; } }
   .infoblock--solarspecsleftside {
     background-image: url("../img/D-design_hero-2090x1800.jpg");
     background-size: cover;
@@ -448,7 +401,7 @@ body {
   text-transform: uppercase;
   height: 30px;
   margin-top: 48px; }
-  @media (max-width: 52.5em) {
+  @media (max-width: 48.5em) {
     .infoblockbutton {
       margin-top: 10px; } }
   @media (max-width: 35.5em) {
@@ -473,7 +426,7 @@ body {
 
 .heading--solarpanelspecs {
   width: 100%; }
-  @media (max-width: 52.5em) {
+  @media (max-width: 48.5em) {
     .heading--solarpanelspecs {
       width: 100%;
       margin: 0 auto;
@@ -508,7 +461,12 @@ body {
   margin: 0 auto; }
 
 .monitoringbox {
-  margin-bottom: 60px; }
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center; }
 
 /* /////////////// FOOTER //////////////
  */
@@ -588,7 +546,7 @@ body {
     @media (max-width: 35.5em) {
       .bg-video--hero {
         display: none; } }
-    @media (max-width: 52.5em) {
+    @media (max-width: 48.5em) {
       .bg-video--hero {
         height: 130vh; } }
     @media (max-width: 60em) {

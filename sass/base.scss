@@ -38,7 +38,7 @@ BREAKPOINTS
       @content;
     }
   } @else if $point == phablet {
-    @media (max-width: 52.5em) {
+    @media (max-width: 48.5em) {
       @content;
     }
   } @else if $point == mobileonly {
@@ -310,24 +310,23 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 0 auto;
-  margin-left: auto;
-  margin-left: 17%;
+  /* margin-left: 17%; */
   justify-content: center;
-  /* min-width: 300px; */
+  /*   min-width: 300px;
+ */
   margin: 0 auto;
 
   &--white {
-    width: 100%;
+    /*  width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: row; */
     /* flex-wrap: wrap; */
-    margin: 0 auto;
+    /*     margin: 0 auto;
     margin-left: auto;
-    justify-content: center;
+    justify-content: center; */
     background-color: white;
     color: black;
-    padding-left: 11%;
+    /*     padding-left: 11%; */
     @include breakpoint(tablet) {
     }
     @include breakpoint(phablet) {
@@ -362,6 +361,30 @@ body {
     text-align: center;
   }
 
+  &--white {
+    font-size: 1.5rem;
+    text-align: left;
+    width: 80%;
+
+    @include breakpoint(minimobileonly) {
+      width: 60%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    @include breakpoint(mobileonly) {
+      width: 60%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    @include breakpoint(phablet) {
+      width: 60%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
   &--solarspecsrightside {
     font-size: 2.1rem;
     color: white;
@@ -377,94 +400,30 @@ body {
     font-weight: 400;
     height: 60px;
     margin-top: 51px;
-    /* @include breakpoint(tablet) {
-      font-size: 2.1rem;
-      color: white;
-      border-right: 1px solid white;
-      display: flex;
-      flex-wrap: wrap;
-      padding-right: 30px;
-      font-size: 1.5rem;
-      margin-top: 51px;
-      text-align: left;
-      font-weight: 400;
+
+    @include breakpoint(minimobileonly) {
+      width: 50%;
+      margin-bottom: 40px !important;
       margin: 0 auto;
-      margin-bottom: 50px;
-    }
-    @include breakpoint(phablet) {
-      font-size: 2.1rem;
-      color: white;
-      border-right: 1px solid white;
-      display: flex;
-      flex-wrap: wrap;
-      padding-right: 30px;
-      font-size: 1.5rem;
-      margin-top: 51px;
-      text-align: left;
-      font-weight: 400;
-      margin: 0 auto;
-      margin-bottom: 50px;
     }
     @include breakpoint(mobileonly) {
-      font-size: 2.1rem;
-      color: white;
-      border-right: 1px solid white;
-      display: flex;
-      flex-wrap: wrap;
-      padding-right: 30px;
-      font-size: 1.5rem;
-      margin-top: 51px;
-      text-align: left;
-      font-weight: 400;
+      width: 50%;
+      margin-bottom: 40px !important;
       margin: 0 auto;
-      margin-bottom: 50px;
+    }
+
+    @include breakpoint(phablet) {
+      width: 50%;
+      margin-bottom: 40px !important;
+      margin: 0 auto;
+    }
+
+    @include breakpoint(mobileonly) {
+      text-align: center;
     }
     @include breakpoint(minimobileonly) {
-      font-size: 2.1rem;
-      color: white;
-      border-right: 1px solid white;
-      display: flex;
-      flex-wrap: wrap;
-      padding-right: 30px;
-      font-size: 1.5rem;
-      margin-top: 51px;
-      margin-bottom: 50px;
-      text-align: left;
-      font-weight: 400;
-      margin: 0 auto;
-    } */
-    /*    padding-right: 10px;
-      font-size: 2.1rem;
-      color: white;
-      width: 144px;
-      border-right: 1px solid white;
-      margin-bottom: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      padding-right: 30px;
-      width: 50%;
-      font-size: 1.5rem;
-      margin-top: 51px;
-      text-align: left;
-      font-weight: 400;
-      height: 120px;
-      margin: 0 auto;
-  } */
-  }
-
-  &--white {
-    font-size: 2.1rem;
-    color: white;
-    /* width: 144px; */
-    margin-bottom: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    padding-right: 10px;
-    width: 86%;
-    font-size: 1.5rem;
-    margin-top: 51px;
-    text-align: left;
-    font-weight: 400;
+      text-align: center;
+    }
   }
 
   &--solarspecsleftside {
@@ -633,10 +592,11 @@ body {
 
 .monitoringbox {
   margin-bottom: 60px;
-  @include breakpoint(mobileonly) {
-  }
-  @include breakpoint(minimobileonly) {
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 /* /////////////// FOOTER //////////////
