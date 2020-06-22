@@ -405,6 +405,15 @@ BREAKPOINTS
   }
 }
 
+* {
+  opacity: 1 !important;
+  visibility: visibile !important;
+}
+
+* {
+  border: 1px solid #f00 !important;
+}
+
 *,
 *::after,
 *::before {
@@ -591,7 +600,7 @@ body {
 .navbar-expand-md .navbar-nav {
   -ms-flex-direction: row;
   flex-direction: row;
-  margin-right: -34%;
+  margin-right: 0%;
 }
 
 .navitemlast {
@@ -616,7 +625,7 @@ body {
 
 .main-subheader {
   font-size: 4rem;
-  margin-bottom: 400px;
+  margin-bottom: 369px;
   color: white;
   &--white {
     text-align: left;
@@ -1046,29 +1055,31 @@ body {
   }
 
   &--hero {
-    position: absolute;
+    /*  position: absolute;
     top: 0;
     left: 0;
     height: 100vh;
     width: 100%;
     z-index: -1;
     opacity: 1;
+    overflow: hidden; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 150vh;
+    width: 100%;
+    z-index: -1;
+    opacity: 1;
     overflow: hidden;
     margin-top: -202px;
-
+    /*     margin-top: -202px;
+ */
     @include breakpoint(minimobileonly) {
       display: none;
     }
 
     @include breakpoint(mobileonly) {
       display: none;
-    }
-
-    @include breakpoint(phablet) {
-      height: 130vh;
-    }
-    @include breakpoint(tablet) {
-      height: 108vh;
     }
   }
   &--section {

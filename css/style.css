@@ -314,6 +314,13 @@ template {
 /*********************
 BREAKPOINTS
 *********************/
+* {
+  opacity: 1 !important;
+  visibility: visibile !important; }
+
+* {
+  border: 1px solid #f00 !important; }
+
 *,
 *::after,
 *::before {
@@ -476,7 +483,7 @@ body {
 .navbar-expand-md .navbar-nav {
   -ms-flex-direction: row;
   flex-direction: row;
-  margin-right: -34%; }
+  margin-right: 0%; }
 
 .navitemlast {
   display: flex;
@@ -498,7 +505,7 @@ body {
 
 .main-subheader {
   font-size: 4rem;
-  margin-bottom: 400px;
+  margin-bottom: 369px;
   color: white;
   /*   @include breakpoint(mobileonly) {
   }
@@ -836,27 +843,31 @@ body {
     width: 100%;
     object-fit: cover; }
   .bg-video--hero {
-    position: absolute;
+    /*  position: absolute;
     top: 0;
     left: 0;
     height: 100vh;
     width: 100%;
     z-index: -1;
     opacity: 1;
+    overflow: hidden; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 150vh;
+    width: 100%;
+    z-index: -1;
+    opacity: 1;
     overflow: hidden;
-    margin-top: -202px; }
+    margin-top: -202px;
+    /*     margin-top: -202px;
+ */ }
     @media (max-width: 21.5em) {
       .bg-video--hero {
         display: none; } }
     @media (max-width: 35.5em) {
       .bg-video--hero {
         display: none; } }
-    @media (max-width: 48.5em) {
-      .bg-video--hero {
-        height: 130vh; } }
-    @media (max-width: 60em) {
-      .bg-video--hero {
-        height: 108vh; } }
   .bg-video--section {
     position: absolute;
     top: 0;
