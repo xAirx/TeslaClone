@@ -314,13 +314,14 @@ template {
 /*********************
 BREAKPOINTS
 *********************/
-* {
+/* * {
   opacity: 1 !important;
-  visibility: visibile !important; }
+  visibility: visibile !important;
+}
 
 * {
-  border: 1px solid #f00 !important; }
-
+  border: 1px solid #f00 !important;
+} */
 *,
 *::after,
 *::before {
