@@ -332,7 +332,22 @@ BREAKPOINTS
   /* changing the box model so that the borders and paddings are no longer added. */ }
 
 html {
-  font-size: 62.5%; }
+  /* font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5% */ }
+  @media (max-width: 21.5em) {
+    html {
+      font-size: 36.25%; } }
+  @media (max-width: 35.5em) {
+    html {
+      font-size: 46.25%; } }
+  @media (max-width: 48.5em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 60em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 70em) {
+    html {
+      font-size: 62.5%; } }
 
 body {
   box-sizing: border-box;
@@ -345,6 +360,10 @@ body {
   flex-wrap: wrap;
   margin-right: 0px;
   margin-left: -15px; }
+
+.overlay {
+  background-color: lightgrey;
+  opacity: 0.69; }
 
 .navbar {
   background-color: white;
@@ -387,7 +406,7 @@ body {
     padding-right: 20px;
     padding-left: 20px;
     background-position: center;
-    padding-bottom: 250px; }
+    padding-bottom: 430px; }
     @media (max-width: 21.5em) {
       .hero--summon {
         display: none; } }
@@ -431,7 +450,7 @@ body {
 
 .hero-solar {
   background-image: url("../img/D_solarpanels_hero_2880x1800_ENC.jpg");
-  background-size: cover;
+  background-size: auto;
   background-repeat: no-repeat;
   position: relative;
   margin-top: -40px;
@@ -439,7 +458,8 @@ body {
   padding-top: 88px;
   text-align: center;
   padding-right: 20px;
-  padding-left: 20px; }
+  padding-left: 20px;
+  background-position-x: center; }
 
 .hero-solar-solarpanels {
   background-image: url("../img/D_eco_app_2880x1154.jpg");
@@ -453,6 +473,9 @@ body {
 
 .textlight {
   color: white; }
+
+.textblack {
+  color: black !important; }
 
 .navbar-brand {
   display: inline-block;
@@ -506,7 +529,7 @@ body {
 
 .main-subheader {
   font-size: 4rem;
-  margin-bottom: 369px;
+  margin-bottom: 219px;
   color: white;
   /*   @include breakpoint(mobileonly) {
   }
@@ -534,7 +557,6 @@ body {
     text-align: left;
     margin-top: 50px;
     margin-left: 10px;
-    margin-bottom: -6px;
     font-weight: 100; }
 
 .maindescription {
@@ -855,7 +877,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    height: 150vh;
+    height: 100vh;
     width: 100%;
     z-index: -1;
     opacity: 1;
