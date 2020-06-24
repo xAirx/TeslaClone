@@ -426,27 +426,7 @@ BREAKPOINTS
 
 html {
   // This defines what 1rem is
-  /* font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5% */
-
-  @include breakpoint(minimobileonly) {
-    font-size: 36.25%; //1 rem = 9px, 9/16 = 50%
-  }
-
-  @include breakpoint(mobileonly) {
-    font-size: 46.25%; //1 rem = 9px, 9/16 = 50%
-  }
-
-  @include breakpoint(phablet) {
-    font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
-  }
-
-  @include breakpoint(tablet) {
-    font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
-  }
-
-  @include breakpoint(desktop) {
-    font-size: 62.5%; //1rem = 12, 12/16
-  }
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
 }
 
 body {
@@ -566,13 +546,14 @@ body {
   }
 }
 .hero-solar {
-  background-image: url("../img/D_solarpanels_hero_2880x1800_ENC.jpg");
-  background-size: auto;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/D_solarpanels_hero_2880x1800_ENC.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
   position: relative;
   margin-top: -40px;
   z-index: 999;
-  padding-top: 88px;
+  padding-top: 78px;
   text-align: center;
   padding-right: 20px;
   padding-left: 20px;
@@ -585,7 +566,7 @@ body {
   background-repeat: no-repeat;
   position: relative;
   z-index: 999;
-  padding-top: 600px;
+  padding-top: 60%;
   text-align: center;
   background-position: center;
 }
@@ -654,7 +635,7 @@ body {
 
 .main-subheader {
   font-size: 4rem;
-  margin-bottom: 219px;
+  margin-bottom: 389px;
   color: white;
   &--white {
     text-align: left;
@@ -690,7 +671,8 @@ body {
 }
 .maindescription {
   font-size: 1.5rem;
-  font-weight: 100;
+  font-weight: 400;
+  color: white;
 }
 
 .infoboxcontainer {
@@ -714,6 +696,8 @@ body {
     justify-content: center; */
     background-color: white;
     color: black;
+    padding-left: 15%;
+    padding-right: 15%;
     /*     padding-left: 11%; */
     @include breakpoint(tablet) {
     }
@@ -858,7 +842,7 @@ body {
     display: flex;
     flex-wrap: wrap;
 
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(72, 70, 70, 0.4);
   }
 }
 .infoblockx {
@@ -934,6 +918,20 @@ body {
 
     border: 2px solid black;
   }
+  &--dark {
+    border-radius: 100px;
+    background-color: transparent;
+    color: white;
+    font-size: 14px;
+    line-height: 3px;
+    font-weight: 100;
+    width: 180px;
+    text-transform: uppercase;
+
+    height: 30px;
+    margin-top: 48px;
+    border: 2px solid black;
+  }
 }
 
 .heading {
@@ -968,10 +966,13 @@ body {
 }
 
 .content {
-  padding: 20px;
+  padding: 35px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),
+    url("https://wallpapertag.com/wallpaper/full/2/b/2/156755-black-texture-wallpaper-2560x1600-for-xiaomi.jpg");
+  background-size: cover;
 }
 
 .faiconmiddle {
