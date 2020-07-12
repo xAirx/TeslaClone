@@ -635,8 +635,9 @@ body {
 
 .main-subheader {
   font-size: 4rem;
-  margin-bottom: 389px;
+
   color: white;
+  margin-bottom: 500px;
   &--white {
     text-align: left;
     margin-left: 10px;
@@ -644,15 +645,18 @@ body {
     margin-bottom: -10px;
   }
 
-  /*   @include breakpoint(mobileonly) {
+  @include breakpoint(mobileonly) {
+    margin-bottom: 480px;
   }
   @include breakpoint(minimobileonly) {
+    margin-bottom: 480px;
   }
   @include breakpoint(phablet) {
+    margin-bottom: 480px;
   }
-  @include breakpoint(tablet) {
-    margin-bottom: 188px;
-  } */
+  @include breakpoint(desktop) {
+    margin-bottom: 400px;
+  }
 }
 .main-header {
   /*   font-size: 2rem;
@@ -661,6 +665,16 @@ body {
   font-size: 10rem;
   font-weight: 100;
   color: white;
+
+  @include breakpoint(mobileonly) {
+    margin-top: 0px;
+  }
+  @include breakpoint(minimobileonly) {
+    margin-top: 0px;
+  }
+  @include breakpoint(phablet) {
+    margin-top: 0px;
+  }
 
   &--white {
     text-align: left;
@@ -762,7 +776,6 @@ body {
     color: white;
     /* width: 144px; */
 
-    border-right: 1px solid white;
     margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -777,23 +790,19 @@ body {
       width: 50%;
       margin-bottom: 40px !important;
       margin: 0 auto;
+      text-align: center;
     }
     @include breakpoint(mobileonly) {
       width: 50%;
       margin-bottom: 40px !important;
       margin: 0 auto;
+      text-align: center;
     }
 
     @include breakpoint(phablet) {
       width: 50%;
       margin-bottom: 40px !important;
       margin: 0 auto;
-    }
-
-    @include breakpoint(mobileonly) {
-      text-align: center;
-    }
-    @include breakpoint(minimobileonly) {
       text-align: center;
     }
   }
@@ -986,6 +995,26 @@ body {
   justify-content: center;
   align-content: center;
   align-items: center;
+  margin-top: 44px;
+
+  @include breakpoint(phablet) {
+    margin-bottom: 0px;
+    &:nth-of-type(2) {
+      margin-bottom: 60px;
+    }
+  }
+  @include breakpoint(mobileonly) {
+    margin-bottom: 0px;
+    &:nth-child(2) {
+      margin-bottom: 60px;
+    }
+  }
+  @include breakpoint(minimobileonly) {
+    margin-bottom: 0px;
+    &:nth-child(2) {
+      margin-bottom: 60px;
+    }
+  }
 }
 
 /* /////////////// FOOTER //////////////
