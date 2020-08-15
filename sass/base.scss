@@ -637,7 +637,8 @@ body {
   font-size: 4rem;
 
   color: white;
-  margin-bottom: 500px;
+  /* margin-bottom: 500px; */
+  margin-bottom: 260px;
   &--white {
     text-align: left;
     margin-left: 10px;
@@ -812,7 +813,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    height: 50vh;
+    /* height: 50vh; */
 
     span {
       color: white;
@@ -1129,9 +1130,8 @@ body {
     z-index: -1;
     opacity: 1;
     overflow: hidden;
-    margin-top: -202px;
-    /*     margin-top: -202px;
- */
+    /* margin-top: -202px; */
+    margin-top: -109px;
     @include breakpoint(minimobileonly) {
       display: none;
     }
